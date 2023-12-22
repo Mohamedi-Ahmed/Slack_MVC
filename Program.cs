@@ -1,4 +1,9 @@
+using TP_SlackMVC.Models;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Ajouter un DBContext
+builder.Services.AddDbContext<DbSlackContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -23,5 +28,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
 
 app.Run();

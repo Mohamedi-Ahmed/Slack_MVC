@@ -1,0 +1,10 @@
+@using TP_SlackMVC.Models
+@model IEnumerable<Thread>
+
+@{
+    var mesThreads = Model;
+    foreach(var thread in mesThreads)
+    {
+        <p>@thread</p>
+    }
+}

@@ -7,11 +7,12 @@ namespace TP_SlackMVC.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-    private readonly DbSlackContext _context;
+	private readonly DbSlackContext _context;
+
     public HomeController(ILogger<HomeController> logger, DbSlackContext context)
     {
+		_context = context;
         _logger = logger;
-        _context = context;
     }
 
     public IActionResult Index()
