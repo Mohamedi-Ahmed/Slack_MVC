@@ -21,7 +21,7 @@ Pour exécuter l'application, vous devez avoir les outils suivants installés :
 
 3. **Lancement du serveur backend** :
    - Exécutez `dotnet run` pour démarrer le serveur ASP.NET Core.
-   - Le serveur devrait démarrer et écouter sur un port spécifié (habituellement `http://localhost:5000`).
+   - Le serveur devrait démarrer et écouter sur un port spécifié (habituellement `http://localhost:5048`).
 
 ### Frontend Angular
 
