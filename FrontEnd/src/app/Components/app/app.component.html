@@ -1,0 +1,18 @@
+<div class="accueil" [class.user-logged-in]="this.UserService.user">
+        <h1>Mini-Slack</h1>
+        <div *ngIf="this.UserService.user">
+            <app-threads></app-threads>
+        </div>
+        <div *ngIf="!this.UserService.user">
+            <div>
+                <input type="text" 
+                placeholder="Entrez un nom d'utilisateur" 
+                [(ngModel)]="this.username"
+                (keyup.enter)="this.UserService.login(this.username)"/>
+                
+                <button type="submit" class="btn btn-primary btn-block btn-large" 
+                (click)="this.UserService.login(this.username)"
+                >Connexion</button>
+            </div>
+        </div>
+</div>

@@ -1,0 +1,154 @@
+.corps_threads {
+  display: flex; /* Utiliser flex pour aligner les éléments côte à côte */
+  height: 100vh; /* Hauteur totale de la fenêtre de visualisation */
+}
+ .titre{
+  text-align: center;
+ }
+
+.side {
+  width: 20%;
+  background-color: #fdfdfd;
+  border: 2px solid #e6e6e6;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 10px;
+  height: 100%;
+
+  max-height: 87vh; 
+  overflow: auto;
+  flex-grow: 1;
+}
+.rightSection {
+  border: 1px solid #e6e6e6;
+
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 3px;
+
+  margin: 10px;
+  height: 100%; /* Occupies all available vertical space */
+
+  max-height: 87vh; 
+  overflow: auto;
+  flex-grow: 1;
+}
+
+.messageList {
+  background-color: #a44242;
+  border-radius: 3px;
+
+  overflow: auto;
+  flex-grow: 1; /* Takes up all available vertical space */
+}
+
+.messageForm input[type="text"] {
+  width: 100%;
+}
+
+.messageForm {
+  width: 100%;
+}
+
+.Message_Box {
+  position: relative; /* Ajouté pour le positionnement de la croix */
+  padding-bottom: 10px;
+
+}
+
+.Message_Box:not(:last-child){
+  border-bottom: 2px solid #ccc;
+  
+}
+
+.closeMessage {
+  position: absolute;
+  top: -20px;
+  right: 2px;
+  padding: 5px 5px;
+  cursor: pointer;
+  size: 100%;
+}
+/* Style pour la croix de fermeture au survol */
+.closeMessage:hover {
+  color: red; /* ou une autre couleur de votre choix */
+}
+
+/* Style des onglets */
+.tab{
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style des boutons à l'intérieur des onglets */
+.tab button{
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+
+.box_new_thread{
+  display: flex;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.new_thread_name{
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+
+/* Changez la couleur de fond des boutons au survol */
+.tab button:hover {
+  background-color: #ddd;
+  width: 100%;
+}
+
+/* Créez un style actif pour les boutons */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style du contenu de l'onglet */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+
+}
+
+/* Style pour la croix de fermeture */
+.closeTab {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+/* Style pour la croix de fermeture au survol */
+.closeTab:hover {
+  color: red; /* ou une autre couleur de votre choix */
+}
+

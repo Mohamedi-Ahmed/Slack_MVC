@@ -1,0 +1,47 @@
+<div class="corps_threads">
+    <div class="side">
+        <p class = "titre">Liste des Threads</p>
+
+        <div class = "box_new_thread">
+            <input class= "new_thread_name" 
+            placeholder="Nouveau thread" 
+            [(ngModel)]="newThreadName"
+            (keyup.enter)="createNewThread()"/>
+            
+            <button class="button button1"
+            (click) = "createNewThread()"
+            >Ajouter</button>
+
+        </div>
+        
+        <p class="tab" *ngFor="let thread of threads">
+
+            <button class="tablinks" 
+            (click)="selectThread(thread)">
+                {{thread.label}}
+                <span class="closeTab" 
+                (click) = "deleteThread(thread.id)">×</span>
+            </button>
+        </p>
+    </div>
+
+    <div class="rightSection">
+        <div class="messageList">
+            <p class="Message_Box" *ngFor="let message of messages">
+                <app-message [message]="message"></app-message>
+                <span class="closeMessage" 
+                (click) = "deleteMessage(message.id)">×</span>
+            </p>
+        </div>
+
+        <div class="messageForm">
+            <div>
+                <input type="text" [(ngModel)]="this.message"
+                (keyup.enter)="sendMessage()"/>
+                <button type="submit" 
+                class="btn btn-primary btn-block btn-large" 
+                (click)="sendMessage()">Envoyer</button>
+            </div>
+        </div>
+    </div>
+</div>
